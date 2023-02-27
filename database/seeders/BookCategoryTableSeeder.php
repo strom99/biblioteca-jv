@@ -11,6 +11,7 @@ class BookCategoryTableSeeder extends Seeder {
      * Run the database seeds.
      */
     public function run(): void {
+        // Recorremos los libros de la tabla para insertar categorias
         Book::all()->each(function (Book $book) {
             // Genera un número aleatorio entre 1 y 3 ambos inclusivos
             $randomCategoriesCount = random_int(1, 3);
